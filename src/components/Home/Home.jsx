@@ -6,8 +6,10 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <JobCategories></JobCategories>
-      <FeaturedJobs></FeaturedJobs>
+      <div className="max-w-screen-xl mx-auto">
+        <JobCategories></JobCategories>
+        <FeaturedJobs></FeaturedJobs>
+      </div>
     </div>
   );
 };

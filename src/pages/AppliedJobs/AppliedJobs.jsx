@@ -35,10 +35,9 @@ const AppliedJobs = () => {
   };
 
   return (
-    <div>
-      <h3>this is applied jobs:{appliedJobs.length} </h3>
+    <div className="max-w-screen-xl mx-auto mt-14">
       <div className="text-right">
-        <details className="dropdown mb-5">
+        <details className="dropdown">
           <summary className="m-1 btn">Filter By</summary>
           <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
             <li onClick={() => handleJobsFilter("all")}>

@@ -13,8 +13,8 @@ const AppliedJob = ({ jobApplied }) => {
     salary,
   } = jobApplied;
   return (
-    <div className="card card-side bg-base-100 shadow-xl my-6 border">
-      <figure>
+    <div className="card card-side bg-base-100 my-6 pr-10 border border-[#E8E8E8]">
+      <figure className="border rounded-lg w-[240px] p-10 bg-[#F4F4F4] m-4">
         <img src={logo} alt={job_title} />
       </figure>
       <div className="card-body">
@@ -36,9 +36,9 @@ const AppliedJob = ({ jobApplied }) => {
             <AiOutlineDollar></AiOutlineDollar> {salary}{" "}
           </h4>
         </div>
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary">view Details</button>
-        </div>
+      </div>
+      <div className="card-actions items-center">
+        <button className="btn linear">view Details</button>
       </div>
     </div>
   );
