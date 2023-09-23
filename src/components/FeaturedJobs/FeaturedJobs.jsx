@@ -13,9 +13,9 @@ const FeaturedJobs = () => {
       .then((data) => setJobs(data));
   }, []);
   return (
-    <div className="text-center">
-      <h3 className="text-5xl font-extrabold">Featured Jobs: {jobs.length} </h3>
-      <p className="font-medium">
+    <div className="text-center mt-24">
+      <h3 className="text-5xl font-extrabold">Featured Jobs </h3>
+      <p className="font-medium my-6 text-[#757575]">
         Explore thousands of job opportunities with all the information you
         need. Its your future
       </p>
@@ -24,7 +24,7 @@ const FeaturedJobs = () => {
           <Job key={idx} job={job}></Job>
         ))}
       </div>
-      <div className={dataLength === jobs.length && "hidden"}>
+      <div className={dataLength === jobs.length ? "hidden" : ""}>
         <button
           onClick={() => setDataLength(jobs.length)}
           className="btn btn-primary text-center my-6 "

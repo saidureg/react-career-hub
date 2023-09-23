@@ -1,7 +1,10 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { saveJobsApplications } from "../../Utilities/localStorage";
+import {
+  getStoredJobs,
+  saveJobsApplications,
+} from "../../Utilities/localStorage";
 import { MdLocationOn, MdOutlineMailOutline } from "react-icons/md";
 import { AiOutlineDollar, AiOutlineCalendar } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
@@ -14,8 +17,15 @@ const JobDetails = () => {
   const job = jobs.find((job) => job.id === idInt);
 
   const handleApplyBtn = () => {
+    const storedData = getStoredJobs();
     saveJobsApplications(idInt);
-    toast("Successfully applied", { autoClose: 2000 });
+
+    const isExist = storedData?.find((jobId) => jobId === job.id);
+    if (!isExist) {
+      toast("Successfully applied", { autoClose: 2000 });
+    } else {
+      toast("Already applied", { autoClose: 2000 });
+    }
   };
 
   return (
