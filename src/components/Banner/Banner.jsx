@@ -2,10 +2,7 @@ const Banner = () => {
   return (
     <div className="hero background">
       <div className="hero-content flex-col lg:flex-row-reverse">
-        <img
-          src="../../../public/assets/images/user.png"
-          className="max-w-md rounded-lg"
-        />
+        <img src="/user.png" className="max-w-md rounded-lg" />
         <div>
           <h1 className="text-7xl font-extrabold text-[#1A1919]">
             One Step Closer To Your{" "}
