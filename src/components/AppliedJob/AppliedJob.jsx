@@ -1,5 +1,6 @@
 import { MdLocationOn } from "react-icons/md";
 import { AiOutlineDollar } from "react-icons/ai";
+import PropTypes from "prop-types";
 
 const AppliedJob = ({ jobApplied }) => {
   const {
@@ -41,6 +42,10 @@ const AppliedJob = ({ jobApplied }) => {
       </div>
     </div>
   );
+};
+
+AppliedJob.propTypes = {
+  jobApplied: PropTypes.object,
 };
 
 export default AppliedJob;
