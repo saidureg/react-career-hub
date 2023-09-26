@@ -8,6 +8,7 @@ import {
 import { MdLocationOn, MdOutlineMailOutline } from "react-icons/md";
 import { AiOutlineDollar, AiOutlineCalendar } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
+import { Helmet } from "react-helmet-async";
 
 const JobDetails = () => {
   const jobs = useLoaderData();
@@ -30,6 +31,9 @@ const JobDetails = () => {
 
   return (
     <div className="max-w-screen-xl mx-auto mt-24">
+      <Helmet>
+        <title>Job Details : {id} </title>
+      </Helmet>
       <div className="grid gap-4 md:grid-cols-4">
         <div className="col-span-3 text-[#1A1919] font-extrabold space-y-6">
           <p>
